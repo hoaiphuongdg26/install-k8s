@@ -20,7 +20,7 @@ echo "net.bridge.bridge-nf-call-ip6tables = 1" | sudo tee -a /etc/sysctl.d/kuber
 echo "net.bridge.bridge-nf-call-iptables = 1" | sudo tee -a /etc/sysctl.d/kubernetes.conf
 echo "net.ipv4.ip_forward = 1" | sudo tee -a /etc/sysctl.d/kubernetes.conf
 sudo sysctl --system
-sudo hostnamectl set-hostname master
+
 sudo touch /etc/hosts
 echo "10.0.0.4 master" | sudo tee -a /etc/hosts
 echo "10.0.0.5 worker" | sudo tee -a /etc/hosts
