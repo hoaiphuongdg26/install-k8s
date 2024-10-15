@@ -1,3 +1,4 @@
+# k8s.sh
 #!/bin/bash
 set -ex
 mkdir -p /etc/apt/keyrings/
@@ -22,5 +23,5 @@ echo "net.ipv4.ip_forward = 1" | sudo tee -a /etc/sysctl.d/kubernetes.conf
 sudo sysctl --system
 
 sudo touch /etc/hosts
-echo "10.0.0.4 master" | sudo tee -a /etc/hosts
-echo "10.0.0.5 worker" | sudo tee -a /etc/hosts
+echo "<master_ip> master" | sudo tee -a /etc/hosts
+echo "<worker_ip> worker" | sudo tee -a /etc/hosts

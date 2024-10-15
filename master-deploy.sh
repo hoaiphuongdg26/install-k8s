@@ -1,3 +1,4 @@
+# maste-deploy.sh
 #!/bin/bash
 set -ex
 sudo hostnamectl set-hostname master

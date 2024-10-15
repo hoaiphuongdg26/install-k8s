@@ -1,3 +1,4 @@
+# worker-deploy.sh
 #!/bin/bash
 set -ex
 
